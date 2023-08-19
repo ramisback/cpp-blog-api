@@ -1,5 +1,10 @@
 # CPP Blog API
 
+[![Build](https://github.com/ramisback/cpp-blog-api/actions/workflows/docker.yml/badge.svg)](https://github.com/ramisback/cpp-blog-api/actions/workflows/docker.yml)
+[![Tests](https://github.com/ramisback/cpp-blog-api/actions/workflows/tests.yml/badge.svg)](https://github.com/ramisback/cpp-blog-api/actions/workflows/tests.yml)
+[![CodeQL](https://github.com/ramisback/cpp-blog-api/actions/workflows/github-code-scanning/codeql/badge.svg)](https://github.com/ramisback/cpp-blog-api/actions/workflows/github-code-scanning/codeql)
+[![Linting](https://github.com/ramisback/cpp-blog-api/actions/workflows/lint.yml/badge.svg)](https://github.com/ramisback/cpp-blog-api/actions/workflows/lint.yml)
+
 A robust and efficient set of RESTful APIs designed to power personal blogs and online journaling platforms. Built using C++, these APIs provide a seamless backend infrastructure for creating, managing, and interacting with personal blog content.
 
 ## Getting Started
@@ -33,7 +38,6 @@ To get started with and run project locally, there are two ways you can get star
 - :white_large_square: Customizable and Extensible
 - :white_large_square: Authentication and Security
 - :white_large_square: Pagination and Sorting
-- :white_large_square: SQL Database Support
 - :white_large_square: NoSQL Database Support
 - :white_large_square: API Documentation
 
