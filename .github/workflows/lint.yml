@@ -1,0 +1,17 @@
+name: Linting
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+
+  build:
+
+    runs-on: ubuntu-22.04
+
+    steps:
+    - name: C/C++ Linter
+      uses: cpp-linter/cpp-linter-action@v2.6.0
