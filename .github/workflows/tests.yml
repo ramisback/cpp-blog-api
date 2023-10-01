@@ -23,9 +23,7 @@ jobs:
     - uses: actions/checkout@v3
 
     - name: Installing dependencies
-      run: |
-        sudo apt-get -y update \
-        sudo apt-get -qq install build-essential libboost-all-dev cmake libtcmalloc-minimal4
+      run: sudo apt-get -qq install build-essential libboost-all-dev cmake libtcmalloc-minimal4
 
     - name: Configure CMake
       # Configure CMake in a 'build' subdirectory. `CMAKE_BUILD_TYPE` is only required if you are using a single-configuration generator such as make.
