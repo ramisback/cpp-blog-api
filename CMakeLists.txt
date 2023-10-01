@@ -44,8 +44,8 @@ add_executable(${PROJECT_NAME}
 
 # Link the executable with Google Test
 target_link_libraries(${PROJECT_NAME}
-GTest::gtest
-GTest::gtest_main
+  GTest::gtest
+  GTest::gtest_main
 )
 
 enable_testing()
@@ -61,7 +61,9 @@ add_executable(${TEST_EXE}
   ${SOURECS}
 )
 
-target_include_directories(${TEST_EXE} PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/src)
+target_include_directories(${TEST_EXE} PRIVATE 
+  ${CMAKE_CURRENT_SOURCE_DIR}/src
+)
 
 # Link the test executable with Google Test
 target_link_libraries(${TEST_EXE}

@@ -30,6 +30,5 @@
 *.exe
 *.out
 *.app
-build/
 build/*
 *.txt

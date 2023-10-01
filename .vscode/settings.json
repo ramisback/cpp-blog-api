@@ -75,5 +75,6 @@
         "compare": "cpp",
         "concepts": "cpp",
         "algorithm": "cpp"
-    }
+    },
+    "C_Cpp.default.configurationProvider": "ms-vscode.cmake-tools"
 }
