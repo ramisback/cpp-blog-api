@@ -13,8 +13,8 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Install clang-format
-        run: sudo apt-get update && sudo apt-get install -y clang-format
+      - name: Install cppcheck
+        run: sudo apt-get install cppcheck
 
-      - name: Format .h and .cpp files
-        run: find . \( -name build -o -name include \) -prune -o \( -iname "*.h" -o -iname "*.cpp" \) -print | xargs clang-format --dry-run --Werror
+      - name: Check files
+        run: cppcheck --force --inline-suppr -iinclude/ -ibuild/ ../
