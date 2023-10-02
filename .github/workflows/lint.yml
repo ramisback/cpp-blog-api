@@ -7,19 +7,12 @@ on:
     branches: [ "main" ]
 
 jobs:
-  cpp-linter:
-    runs-on: ubuntu-latest
+  cpplint:
+    runs-on: ubuntu-22.04
     steps:
       - uses: actions/checkout@v3
-      - uses: cpp-linter/cpp-linter-action@v2
-        id: linter
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - uses: actions/setup-python@v4
         with:
-          style: file
-
-      - name: Fail fast?!
-        if: steps.linter.outputs.checks-failed > 0
-        # run: echo "Some files failed the linting checks!"
-        # for actual deployment
-        run: exit 1
+          python-version: 3.11.1
+      - run: pip install cpplint
+      - run: cpplint --recursive $( find src -name \*.cpp -or -name \*.ino | grep -vE \include )
