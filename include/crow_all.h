@@ -31,6 +31,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 The Crow logo and other graphic material (excluding third party logos) used are under exclusive Copyright (c) 2021-2022, Farook Al-Sammarraie (The-EDev), All rights reserved.
 */
+// clang-format off
 #pragma once
 // settings for crow
 // TODO(ipkn) replace with runtime config. libucl?

@@ -1,8 +1,5 @@
 ---
 Language: Cpp
 BasedOnStyle: LLVM
-AlignConsecutiveDeclarations: true
-AlignConsecutiveAssignments: true
-AlignConsecutiveMacros: AcrossEmptyLines
 IndentWidth: 4
 ...
