@@ -1,4 +1,4 @@
-name: Linting
+name: Code Check
 
 on:
   push:
@@ -7,7 +7,7 @@ on:
     branches: [ "main" ]
 
 jobs:
-  lint:
+  static_check:
     runs-on: ubuntu-22.04
     steps:
       - name: Checkout code

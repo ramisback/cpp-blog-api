@@ -38,10 +38,9 @@ file(GLOB_RECURSE SOURECS
 
 # Add your source files
 add_executable(${PROJECT_NAME}
-  main.cpp
-  ${SOURECS}
+main.cpp
+${SOURECS}
 )
-
 # Link the executable with Google Test
 target_link_libraries(${PROJECT_NAME}
   GTest::gtest
