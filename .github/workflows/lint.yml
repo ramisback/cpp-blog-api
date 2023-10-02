@@ -7,11 +7,14 @@ on:
     branches: [ "main" ]
 
 jobs:
-
-  build:
-
+  lint:
     runs-on: ubuntu-22.04
-
     steps:
-    - name: C/C++ Linter
-      uses: cpp-linter/cpp-linter-action@v2.6.0
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Install clang-format
+        run: sudo apt-get update && sudo apt-get install -y clang-format
+
+      - name: Format .h and .cpp files
+        run: find . \( -name build -o -name include \) -prune -o \( -iname "*.h" -o -iname "*.cpp" \) -print | xargs clang-format --dry-run --Werror

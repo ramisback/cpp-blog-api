@@ -1,0 +1,20 @@
+name: Code Check
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  static_check:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Install cppcheck
+        run: sudo apt-get install cppcheck
+
+      - name: Check files
+        run: cppcheck --force --inline-suppr -iinclude/ -ibuild/ ../
