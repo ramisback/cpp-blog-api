@@ -8,14 +8,17 @@ RUN apt-get -qq update --fix-missing && \
 
 # Define development stage, set working directory, for devcontainers runtime environment
 FROM build AS development
+EXPOSE 18080
+
+# Define development stage, set working directory, for devcontainers runtime environment
+FROM development AS binary
 COPY . /usr/src/app
 WORKDIR /usr/src/app
 RUN cmake . && make
-EXPOSE 18080
 
 # Create production stage from a minimal base, copy the compiled application, and set default command
 FROM scratch AS production
-COPY --from=development /usr/src/app/blog_backend /
+COPY --from=binary /usr/src/app/blog_backend /
 EXPOSE 18080
 CMD ["./blog_backend"]
 LABEL Name=blog_backend Version=0.0.1
