@@ -76,5 +76,25 @@
         "concepts": "cpp",
         "algorithm": "cpp"
     },
+    "cmake.configureOnOpen": true,
+    "[cpp]": {
+        "editor.defaultFormatter": "xaver.clang-format",
+        "editor.formatOnSave": true,
+        "editor.wordBasedSuggestions": true,
+        "editor.suggest.insertMode": "replace",
+        "editor.semanticHighlighting.enabled": true
+    },
+    "C_Cpp.default.cStandard": "c23",
+    "C_Cpp.clang_format_fallbackStyle": "LLVM",
+    "C_Cpp.formatting": "clangFormat",
+    "debug.onTaskErrors": "showErrors",
+    "C_Cpp.default.cppStandard": "c++23",
+    "clang-format.language.typescript.fallbackStyle": "LLVM",
+    "C_Cpp.clang_format_sortIncludes": true,
+    "C_Cpp.vcFormat.indent.caseContents": false,
+    "C_Cpp.vcFormat.indent.namespaceContents": false,
+    "C_Cpp.vcFormat.indent.lambdaBracesWhenParameter": false,
+    "C_Cpp.vcFormat.newLine.beforeElse": false,
+    "C_Cpp.vcFormat.newLine.beforeCatch": false,
     "C_Cpp.default.configurationProvider": "ms-vscode.cmake-tools"
 }

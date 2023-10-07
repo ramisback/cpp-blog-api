@@ -8,6 +8,9 @@ RUN apt-get -qq update --fix-missing && \
 
 # Define development stage, set working directory, for devcontainers runtime environment
 FROM build AS development
+RUN apt-get -y install curl
+RUN apt-get -y install clang-format
+
 EXPOSE 18080
 
 # Define development stage, set working directory, for devcontainers runtime environment

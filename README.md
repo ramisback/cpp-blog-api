@@ -7,6 +7,8 @@
 
 A robust and efficient set of RESTful APIs designed to power personal blogs and online journaling platforms. Built using C++, these APIs provide a seamless backend infrastructure for creating, managing, and interacting with personal blog content.
 
+![CPP Blog API](https://repository-images.githubusercontent.com/677959815/853184c2-13dd-4a98-abbc-8cd23d7a0091)
+
 ## Getting Started
 
 To get started with and run project locally, there are two ways you can get started:
@@ -47,6 +49,12 @@ To get started with and run project locally, there are two ways you can get star
 ## Contributing
 
 I encourage and welcome contributions to project from the open-source community. Whether you spot a bug, have an idea for an enhancement, or want to add new features, feel free to submit a pull request.
+
+## Libraries Used
+
+Here's a list of the major libraries used in this project:
+
+- [Crow](https://github.com/CrowCpp/Crow) [For routing]
 
 ## License
 
