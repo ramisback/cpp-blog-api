@@ -86,3 +86,9 @@ add_custom_target(tests
 # Add a test
 include(GoogleTest)
 gtest_discover_tests(${TEST_EXE})
+
+add_custom_target(lint
+  COMMAND find .. \( -path ../build/CMakeFiles -o -name include \) -prune -o \( -iname "*.h" -o -iname "*.cpp" \) -print | xargs clang-format --dry-run --Werror
+  COMMENT "Running clang-format linting"
+  VERBATIM
+)
